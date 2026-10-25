@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bereken eenvoudig een prijsindicatie voor buitenschilderwerk bij BouwPro Bedrijf.">
+    <title>Buitenschilderwerk | BouwPro Bedrijf</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <header class="calculator-header">
+    <a href="index.html" class="calculator-logo">
+        BouwPro <span>Bedrijf</span>
+    </a>
+
+    <a href="index.html" class="back-link"> Terug naar home</a>
+</header>
+
+    <main>
+        <section class="calculator-section">
+            <div class="container">
+
+                <div class="calculator-intro">
+                    <h1>Buitenschilderwerk</h1>
+                    <p>
+                        Bereken eenvoudig een vrijblijvende prijsindicatie
+                        voor uw buitenschilderwerk.
+                    </p>
+                    <p>
+                        De prijzen zijn exclusief btw en inclusief verf
+                        en materialen. Steiger- of hoogwerkkosten zijn niet inbegrepen.
+                    </p>
+                </div>
+
+                <form id="exteriorCalculator" class="calculator-form">
+
+                    <div class="calculator-field">
+                        <label for="kozijnen">Kozijnen schilderen</label>
+                        <input type="number" id="kozijnen" min="0" step="1" placeholder="0">
+                    </div>
+
+                    <div class="calculator-field">
+                        <label for="deuren">Buitendeuren schilderen</label>
+                        <input type="number" id="deuren" min="0" step="1" placeholder="0">
+                    </div>
+
+                    <div class="calculator-field">
+                        <label for="boeidelen">Boeidelen schilderen</label>
+                        <input type="number" id="boeidelen" min="0" step="0.5" placeholder="0">
+                    </div>
+
+                    <div class="calculator-field">
+                        <label for="buitenmuur">Buitenmuur schilderen</label>
+                        <input type="number" id="buitenmuur" min="0" step="1" placeholder="0">
+                    </div>
+
+                    <div class="calculator-field">
+                        <label for="houtrot">Kleine houtrotreparaties</label>
+                        <input type="number" id="houtrot" min="0" step="1" placeholder="0">
+                    </div>
+
+                    <div class="calculator-field">
+                        <label for="steiger">Is een steiger of hoogwerker nodig?</label>
+                        <select id="steiger">
+                            <option value="nee">Nee / nog niet bekend</option>
+                            <option value="ja">Ja, mogelijk nodig</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn">
+                        Bereken prijsindicatie
+                    </button>
+
+                    <div id="priceResult" class="price-result" aria-live="polite"></div>
+
+                </form>
+
+                <p class="calculator-disclaimer">
+                    Dit is een vrijblijvende prijsindicatie, exclusief btw.
+                    De definitieve prijs wordt bepaald na beoordeling van de werkzaamheden.
+                    Eventuele steiger- of hoogwerkkosten worden apart berekend.
+                    Houtrotreparaties kunnen duurder uitvallen afhankelijk van de schade.
+                </p>
+
+                <a href="index.html" class="back-link">← Terug naar de homepage</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+        </div>
+</footer>
+<script src="buitenschilderwerk.js"></script>
+</body>

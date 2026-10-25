@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Binnenschilderwerk berekenen | BouwPro Bedrijf</title>
+
+    <meta name="description" content="Bereken eenvoudig een prijsindicatie voor uw binnenschilderwerk bij BouwPro Bedrijf.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="calculator-header">
+    <a href="index.html" class="calculator-logo">
+        BouwPro <span>Bedrijf</span>
+    </a>
+
+    <a href="index.html" class="back-link"> Terug naar home</a>
+</header>
+
+<main class="calculator-main">
+
+    <section class="calculator-intro">
+       
+
+        <h1>Wat kost uw binnenschilderwerk?</h1>
+
+        <p>
+            Beantwoord enkele vragen over uw woning en ontvang
+            vrijblijvend een persoonlijke prijsindicatie.
+        </p>
+    </section>
+
+    <section class="calculator-box">
+
+        <form id="paintCalculator">
+
+            <div class="form-group">
+                <label for="wallArea">
+                    Hoeveel m² muur wilt u laten schilderen?
+                </label>
+
+                <input
+                    type="number"
+                    id="wallArea"
+                    min="1"
+                    step="0.1"
+                    placeholder="Bijvoorbeeld 50"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="ceilingArea">
+                    Wilt u ook het plafond laten schilderen?
+                </label>
+
+                <select id="ceilingArea">
+                    <option value="0">Nee</option>
+                    <option value="yes">Ja</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="ceilingAreaGroup" style="display: none;">
+                <label for="ceilingM2">
+                    Hoeveel m² plafond?
+                </label>
+
+                <input
+                    type="number"
+                    id="ceilingM2"
+                    min="1"
+                    step="0.1"
+                    placeholder="Bijvoorbeeld 25"
+                >
+            </div>
+
+            <div class="form-group">
+    <label for="wallCondition">Wat is de staat van uw muren?</label>
+
+    <select id="wallCondition" required>
+        <option value="good">Goed – kleine gaatjes en normaal schuurwerk</option>
+        <option value="extra">Extra voorbereiding nodig</option>
+    </select>
+</div>
+
+            <div class="form-group" id="wallRepairGroup" style="display: none;">
+    <label for="wallRepair">
+        Welke extra werkzaamheden zijn nodig?
+    </label>
+
+    <select id="wallRepair">
+        <option value="none">Geen extra werkzaamheden</option>
+        <option value="filler">Muren volledig plamuren</option>
+        <option value="large">Grote beschadigingen herstellen</option>
+    </select>
+</div>
+
+
+            <button type="submit" class="calculate-button">
+                Bereken mijn prijsindicatie
+            </button>
+
+        </form>
+
+        <div id="priceResult" class="price-result" aria-live="polite"></div>
+
+        <p class="calculator-note">
+            De berekening is een indicatie. De definitieve prijs hangt af
+            van de staat van de ondergrond en de benodigde werkzaamheden.
+        </p>
+
+    </section>
+
+</main>
+
+<footer class="calculator-footer">
+    <p>© BouwPro Bedrijf – Alle rechten voorbehouden.</p>
+</footer>
+
+<script src="binnenschilderwerk.js"></script>
+
+</body>
+</html>
+```

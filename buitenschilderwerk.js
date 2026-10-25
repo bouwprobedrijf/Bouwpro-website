@@ -36,13 +36,6 @@ calculator.addEventListener("submit", function (event) {
 
     let bericht = `
 Prijsindicatie buitenschilderwerk - BouwPro Bedrijf
-
-Kozijnen: ${kozijnen} x €250 = ${euro.format(prijsKozijnen)}
-Buitendeuren: ${deuren} x €320 = ${euro.format(prijsDeuren)}
-Boeidelen: ${boeidelen} meter x €35 = ${euro.format(prijsBoeidelen)}
-Buitenmuur: ${buitenmuur} m² x €35 = ${euro.format(prijsBuitenmuur)}
-Kleine houtrotreparaties: ${houtrot} plek(ken), vanaf ${euro.format(prijsHoutrot)}
-
 Totaalindicatie: ${euro.format(totaal)} exclusief btw.
 `;
 

@@ -283,6 +283,506 @@ nav a:hover {
 header {
   border-radius: 0;
 }
+/* Header navigation layout */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.logo {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.nav a {
+  white-space: nowrap;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 24px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.nav a {
+  white-space: nowrap;
+}
+
+/* Mobile navigation */
+@media (max-width: 650px) {
+  header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+
+header .logo {
+  display: block;
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+header:has(.nav.open) .logo {
+  display: none;
+}
+
+.menu-toggle {
+  display: block;
+  flex-shrink: 0;
+  order: 2;
+  margin-left: 0;
+}
+
+.nav {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  gap: 12px;
+  width: auto;
+  margin-left: auto;
+  padding: 0;
+}
+
+.nav.open {
+  display: flex;
+  animation: menuSlideIn 0.3s ease-out;
+}
+
+.nav a {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+@keyframes menuSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.service-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.service-link h3 {
+  color: inherit;
+}
+
+.service-link p {
+  color: inherit;
+}
+
+.service {
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service:hover {
+  transform: translateY(-4px);
+}
+
+/* Binnenschilderwerk calculator */
+
+.calculator-header {
+    background: #122536;
+    padding: 22px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.calculator-logo {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.calculator-logo span {
+    color: #d6ad60;
+}
+
+.back-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #d6ad60;
+}
+
+.calculator-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 65px 24px;
+}
+
+.calculator-intro {
+    max-width: 750px;
+    margin-bottom: 1px;
+}
+
+.calculator-label {
+    color: #b18a43;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.calculator-intro h1 {
+    color: #122536;
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.15;
+    margin: 0 0 0px;
+}
+
+.calculator-intro > p:last-child {
+    color: #5c6670;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.calculator-box {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 35px rgba(18, 37, 54, 0.08);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    color: #122536;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #cbd2d9;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #122536;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: 2px solid #d6ad60;
+    border-color: #d6ad60;
+}
+
+.calculate-button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 7px;
+    background: #c49a4a;
+    color: #122536;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.calculate-button:hover {
+    background: #d6ad60;
+}
+
+.price-result {
+    margin-top: 10px;
+    color: #122536;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.calculator-note {
+    margin-top: 25px;
+    color: #68737d;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.calculator-footer {
+    padding: 25px;
+    background: #122536;
+    color: #ffffff;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .calculator-header {
+        padding: 18px;
+    }
+
+    .calculator-logo {
+        font-size: 19px;
+    }
+
+    .back-link {
+        font-size: 13px;
+    }
+
+    .calculator-main {
+        padding: 20px 16px;
+    }
+
+    .calculator-box {
+        padding: 22px 18px;
+    }
+}
+.whatsapp-button {
+    text-decoration: none !important;
+}
+/* Ruimte boven en onder de calculator verkleinen */
+.calculator-main {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.calculator-intro {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.calculator-intro h1 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.calculator-box {
+    margin-top: 10px !important;
+}
+
+/* Buitenschilderwerk calculator */
+
+.calculator-section {
+    padding: 60px 20px;
+    background: #f7f7f5;
+    min-height: 80vh;
+}
+
+.calculator-section .container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.calculator-intro {
+    margin-bottom: 35px;
+}
+
+.calculator-intro h1 {
+    color: #132b3a;
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.calculator-intro p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.calculator-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.calculator-field {
+    margin-bottom: 22px;
+}
+
+.calculator-field label {
+    display: block;
+    margin-bottom: 9px;
+    color: #132b3a;
+    font-weight: 600;
+}
+
+.calculator-field input,
+.calculator-field select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #d5d9dc;
+    border-radius: 6px;
+    font-size: 16px;
+    background: #fff;
+}
+
+.calculator-field input:focus,
+.calculator-field select:focus {
+    outline: none;
+    border-color: #c5a15b;
+    box-shadow: 0 0 0 3px rgba(197, 161, 91, 0.15);
+}
+
+.calculator-form button,
+.price-result .btn {
+    display: inline-block;
+    background: #c5a15b;
+    color: #132b3a;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calculator-form button:hover,
+.price-result .btn:hover {
+    background: #b18d47;
+}
+
+.price-result {
+    margin-top: 25px;
+    padding: 22px;
+    background: #f2f5f6;
+    border-left: 4px solid #c5a15b;
+    border-radius: 6px;
+    line-height: 1.8;
+}
+
+.price-result h2 {
+    color: #132b3a;
+}
+
+.price-result strong {
+    font-size: 26px;
+    color: #132b3a;
+}
+
+.calculator-disclaimer {
+    margin-top: 25px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #132b3a;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: #c5a15b;
+}
+
+@media (max-width: 600px) {
+    .calculator-section {
+        padding: 35px 15px;
+    }
+
+    .calculator-intro h1 {
+        font-size: 29px;
+    }
+
+    .calculator-form {
+        padding: 20px;
+    }
+}
+/* Buitenschilderwerk header */
+.calculator-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 6%;
+    background: #122536;
+    box-sizing: border-box;
+}
+
+.calculator-logo {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.calculator-logo span {
+    color: #c5a15b;
+}
+
+.calculator-header .back-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.calculator-header .back-link:hover {
+    color: #c5a15b;
+}
 
 
-  
+
+
